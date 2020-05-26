@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A3FB99E-029E-4419-B8E6-03BF5057E665}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Interpol</RootNamespace>
+    <AssemblyName>Interpol</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>interface.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\DataBase.cs" />
+    <Compile Include="Components\Gangster.cs" />
+    <Compile Include="Components\Mail.cs" />
+    <Compile Include="Components\User.cs" />
+    <Compile Include="Forms\AdvancedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdvancedSearch.Designer.cs">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArchieveDossier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArchieveDossier.Designer.cs">
+      <DependentUpon>ArchieveDossier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Archive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Archive.Designer.cs">
+      <DependentUpon>Archive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateDossier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateDossier.Designer.cs">
+      <DependentUpon>CreateDossier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dossier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dossier.Designer.cs">
+      <DependentUpon>Dossier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reason.Designer.cs">
+      <DependentUpon>Reason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempData.cs" />
+    <EmbeddedResource Include="Forms\AdvancedSearch.resx">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArchieveDossier.resx">
+      <DependentUpon>ArchieveDossier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Archive.resx">
+      <DependentUpon>Archive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateDossier.resx">
+      <DependentUpon>CreateDossier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dossier.resx">
+      <DependentUpon>Dossier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reason.resx">
+      <DependentUpon>Reason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Criminals\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Authorization\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Authorization\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Authorization\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Authorization\interpol_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Authorization\show.png" />
+    <None Include="Images\Authorization\hide.png" />
+    <None Include="Images\MainMenu\main_map.png" />
+    <None Include="Images\MainMenu\advanced_search.png" />
+    <None Include="Images\MainMenu\finger.png" />
+    <None Include="Images\MainMenu\cancelled.png" />
+    <None Include="Images\MainMenu\minus.png" />
+    <None Include="Images\Dossier\left-arrow.png" />
+    <None Include="Images\Dossier\RedNotice.jpg" />
+    <None Include="Images\AdvancedSearch\search_bar.png" />
+    <None Include="Images\AdvancedSearch\accept.png" />
+    <None Include="Images\AdvancedSearch\denied.png" />
+    <None Include="Images\info.png" />
+    <None Include="Images\Dossier\criss-cross.png" />
+    <None Include="Images\Archive\National_Security_Archive_logo.png" />
+    <None Include="Images\Archive\TheDialogue.jpg" />
+    <None Include="Images\Archive\national_archive.png" />
+    <None Include="Images\Archive\datacenter.jpg" />
+    <None Include="Images\Archive\WebArchive.jpg" />
+    <None Include="Images\Archive\home.png" />
+    <None Include="Images\reload.gif" />
+    <None Include="Images\57fb5c0dd3ed634b-syncing-success-icon-pinterest-ui-animation.gif" />
+    <None Include="Images\giphy.gif" />
+    <None Include="Images\arrow_loader.gif" />
+    <None Include="Images\arrow_loader_static.png" />
+    <None Include="Images\MainMenu\folder.png" />
+    <None Include="Images\MainMenu\add.png" />
+    <None Include="Images\MainMenu\search_icon.png" />
+    <None Include="Images\AdvancedSearch\search_icon.png" />
+    <None Include="Images\Archive\return.png" />
+    <None Include="Images\Dossier\reason.png" />
+    <None Include="Images\Dossier\update.png" />
+    <None Include="Images\Dossier\save.png" />
+    <None Include="Images\Archive\open.png" />
+    <None Include="Images\Archive\planet.gif" />
+    <None Include="Images\Archive\black_logo.png" />
+    <None Include="Images\Archive\handcuffs.jpg" />
+    <Content Include="interface.ico" />
+    <Content Include="InterpolDataBase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InterpolDataBase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>InterpolDataBase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
